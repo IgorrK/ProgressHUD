@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressHUDView" customModule="ProgressHUD" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="clH-GE-7RC" id="4Z2-Yv-wqD"/>
+                <outlet property="arcView" destination="YF0-cX-7Is" id="9jf-wY-tPU"/>
+                <outlet property="timerLabel" destination="TsM-wH-C0Y" id="m9y-Cz-njg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="425"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YF0-cX-7Is">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="235"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="YF0-cX-7Is" secondAttribute="height" id="hti-qi-Jt0"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-wH-C0Y">
+                    <rect key="frame" x="101" y="107.5" width="33.5" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clH-GE-7RC">
+                    <rect key="frame" x="77" y="175" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="QAx-Qs-KCu"/>
+                        <constraint firstAttribute="width" secondItem="clH-GE-7RC" secondAttribute="height" id="glb-b3-1qK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="MMi-fj-jzA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.14159358480000001" green="0.14318143010000001" blue="0.25961882809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TsM-wH-C0Y" firstAttribute="centerY" secondItem="YF0-cX-7Is" secondAttribute="centerY" id="9ux-eU-S39"/>
+                <constraint firstItem="YF0-cX-7Is" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Oue-Qm-0lE"/>
+                <constraint firstItem="clH-GE-7RC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WgQ-HI-hn6"/>
+                <constraint firstItem="clH-GE-7RC" firstAttribute="bottom" secondItem="YF0-cX-7Is" secondAttribute="bottom" constant="20" id="aBA-Mk-BML"/>
+                <constraint firstItem="TsM-wH-C0Y" firstAttribute="centerX" secondItem="YF0-cX-7Is" secondAttribute="centerX" id="dY0-5b-oND"/>
+                <constraint firstAttribute="trailing" secondItem="YF0-cX-7Is" secondAttribute="trailing" id="vcX-u0-jpy"/>
+                <constraint firstItem="YF0-cX-7Is" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ycb-00-0Mv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-45.5" y="-35.5"/>
+        </view>
+    </objects>
+</document>
